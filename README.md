@@ -24,7 +24,7 @@ Ensure you have the following installed on your system:
 
 ```bash
 git clone https://github.com/your-username/tisse-ta-toile.git
-cd tisse-ta-toile
+cd gamecyberquest
 ```
 
 2. Install dependencies:
