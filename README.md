@@ -75,15 +75,6 @@ npm run lint
 yarn lint
 ```
 
-## Project Structure
-
-- `/app`: Contains the main pages and layout of the application.
-- `/components`: Reusable UI components such as cards, buttons, and forms.
-- `/data`: Game steps and related data.
-- `/lib`: Utility functions and configurations.
-- `/types`: Type definitions for the project.
-- `/styles`: Global and component-specific styles.
-
 ## Deployment
 
 The easiest way to deploy this application is via [Vercel](https://vercel.com). Follow the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
