@@ -1,4 +1,4 @@
-# Game Cyber Quest
+# Tisse Ta Toile
 
 This project is a web application designed to raise awareness about privacy and personal data protection through an interactive and educational experience. The project is built with [Next.js](https://nextjs.org) and leverages modern web development tools and libraries.
 
