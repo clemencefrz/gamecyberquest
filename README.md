@@ -7,7 +7,6 @@ This project is a web application designed to raise awareness about privacy and 
 - **Interactive Gameplay**: Engage in a step-by-step game to uncover clues and learn about OSINT (Open Source Intelligence).
 - **Educational Content**: Explore tools and best practices for cybersecurity and privacy protection.
 - **Responsive Design**: Optimized for various devices and screen sizes.
-- **Integration with Supabase**: Save game sessions and track progress.
 
 ## Getting Started
 
@@ -23,8 +22,8 @@ Ensure you have the following installed on your system:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/gamecyberquest.git
-cd gamecyberquest
+git clone https://github.com/your-username/tisse-ta-toile.git
+cd tisse-ta-toile
 ```
 
 2. Install dependencies:
@@ -85,7 +84,6 @@ To learn more about the tools and technologies used in this project, check out t
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Supabase Documentation](https://supabase.com/docs)
 
 ## License
 

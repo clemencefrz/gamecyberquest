@@ -37,7 +37,7 @@ const PageContent = () => {
 export default function Page() {
   return (
     <GameProvider>
-      <div className="font-[family-name:var(--font-geist-mono)] flex flex-col justify-center h-screen">
+      <div className="font-[family-name:var(--font-geist-mono)] flex flex-col justify-center min-h-screen">
         <main className="flex justify-center items-center w-full p-4 sm:py-10">
           <PageContent />
         </main>

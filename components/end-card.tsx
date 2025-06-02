@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -8,36 +7,10 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { supabase } from "@/lib/supabaseClient";
 import { Fingerprint, ImageDown } from "lucide-react";
 
 type Props = {
   handleRestart: () => void;
-};
-
-const saveToDatabase = async ({
-  team_name,
-  start_at,
-}: {
-  team_name: string;
-  start_at: string;
-}) => {
-  try {
-    const { error } = await supabase.from("game_sessions").insert([
-      {
-        team_name,
-        start_at,
-      },
-    ]);
-
-    if (error) {
-      console.error("Error inserting data:", error);
-    } else {
-      console.log("Data inserted successfully:", { start_at, team_name });
-    }
-  } catch (error) {
-    console.error("Unexpected error:", error);
-  }
 };
 
 const EndCard = ({ handleRestart }: Props) => {
@@ -50,19 +23,8 @@ const EndCard = ({ handleRestart }: Props) => {
   const seconds = Math.floor((timeElapsed % 60000) / 1000);
   const formattedTime = `${minutes} minutes et ${seconds} secondes`;
 
-  useEffect(() => {
-    if (startTime && userName) {
-      saveToDatabase({
-        start_at: startTime,
-        team_name: userName,
-      });
-    }
-    // We want to save the data only one
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
-    <Card className="w-full max-w-7xl">
+    <Card className="w-full max-w-7xl max-h-4xl overflow-scroll">
       <CardHeader>
         <CardTitle>🎉 Mission accomplie !</CardTitle>
         <CardDescription className="space-y-2 flex flex-col gap-4 sm:py-3">
@@ -76,7 +38,7 @@ const EndCard = ({ handleRestart }: Props) => {
           </span>
           <span>
             Mais comme vous êtes{" "}
-            <strong>des véritables hackers éthiques</strong>, vous n’en ferez{" "}
+            <strong>des véritables hackers éthiques</strong>, vous n&apos;en ferez{" "}
             <strong>évidemment rien</strong> 💡.
           </span>
 
@@ -90,7 +52,7 @@ const EndCard = ({ handleRestart }: Props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              consulte le livret d’enquête en cliquant ici.
+              consulte le livret d&apos;enquête en cliquant ici.
             </a>
           </span>
         </CardDescription>
@@ -101,7 +63,7 @@ const EndCard = ({ handleRestart }: Props) => {
         </h2>
 
         <p className="text-muted-foreground">
-          L’OSINT (Open Source Intelligence) consiste à collecter des
+          L&apos;OSINT (Open Source Intelligence) consiste à collecter des
           informations à partir de sources publiques.
         </p>
 
@@ -127,7 +89,7 @@ const EndCard = ({ handleRestart }: Props) => {
                 }
               >
                 <Fingerprint className="h-4 w-4 mr-2" />
-                Vérifie si tes informations ont fuité
+                  Have I Been Pwned
               </Button>
             </CardContent>
           </Card>
@@ -153,7 +115,7 @@ const EndCard = ({ handleRestart }: Props) => {
                 }
               >
                 <ImageDown className="h-4 w-4 mr-2" />
-                Vérifie si des photos de toi circulent en ligne
+                PimEyes
               </Button>
             </CardContent>
           </Card>
@@ -174,7 +136,7 @@ const EndCard = ({ handleRestart }: Props) => {
             width="560"
             height="315"
             src="https://www.youtube.com/embed/adUtBK0gIHU?start=6"
-            title="YouTube video"
+            title="Chaîne Youtube de Guillaume Pley - Micode : Le truc à faire sur internet pour ne pas se faire pirater"
           ></iframe>
         </div>
       </CardContent>
